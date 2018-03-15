@@ -1,0 +1,3 @@
+from pontozero_app.controllers.IControleEstudante import IControleEstudante
+from pontozero_app.controllers.IControleEmpresa import IControleEmpresa
+from pontozero_app.controllers.IControleVaga import IControleVaga
