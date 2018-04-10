@@ -1,17 +1,12 @@
 from django.db import models
 from pontozero_app.modelos import *
 from werkzeug.security import check_password_hash, generate_password_hash
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
-class Empresa(models.Model):
-    nome = models.CharField(max_length=200)
+class Empresa(Instituicao):
     ramo = models.CharField(max_length=200)
-    cnpj = models.CharField(max_length=20, primary_key=True)
-    telefone = models.CharField(max_length=15)
-    email = models.EmailField(unique=True)
-    site = models.CharField(max_length=100)
-    endereco = models.OneToOneField(Endereco, null=True)
-    password = models.CharField(max_length=100)
+    reputacao = models.FloatField(MinValueValidator(0), MaxValueValidator(5), default=5)
 
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):

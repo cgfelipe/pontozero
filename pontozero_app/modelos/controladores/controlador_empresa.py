@@ -1,6 +1,7 @@
 from pontozero_app.modelos import CadastroEmpresa
 from pontozero_app.modelos import RepositorioFactory
 
+
 class ControladorEmpresa(object):
     cadastro_empresa = CadastroEmpresa(RepositorioFactory())
 

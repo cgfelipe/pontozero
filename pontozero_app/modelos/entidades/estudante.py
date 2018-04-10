@@ -7,14 +7,8 @@ import base64
 # Create your modelos here.
 
 
-class Estudante(models.Model):
-    nome = models.CharField(max_length=200)
-    cpf = models.CharField(max_length=11, primary_key=True)
-    email = models.EmailField(unique=True)
-    telefone = models.CharField(max_length=20)
-    curriculo = models.FileField(null=True, blank=True)
-    endereco = models.OneToOneField(Endereco, null=True)
-    password = models.CharField(max_length=100)
+class Estudante(Pessoa):
+    instituicao = models.ForeignKey(Escola, on_delete=models.CASCADE)
 
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):

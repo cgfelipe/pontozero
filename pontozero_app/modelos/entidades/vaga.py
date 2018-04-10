@@ -8,5 +8,5 @@ class Vaga(models.Model):
     setor = models.CharField(max_length=100)
     funcao = models.CharField(max_length=100)
     descricao = models.TextField()
-    empresa_responsavel = models.ForeignKey(Empresa)
+    empresa_responsavel = models.ForeignKey(Empresa, on_delete=models.CASCADE)
     estudantes = models.ManyToManyField(Estudante)
