@@ -3,4 +3,4 @@ from pontozero_app.modelos import *
 
 
 class Escola(Instituicao):
-    pass
+    cursos = models.ManyToManyField(Curso)

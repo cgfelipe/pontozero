@@ -20,6 +20,8 @@ from pontozero_app.modelos.repositorios.repositorio_abstract_factory import Repo
 from pontozero_app.modelos.cadastros.cadastro_empresa import CadastroEmpresa
 from pontozero_app.modelos.cadastros.cadastro_estudante import CadastroEstudante
 from pontozero_app.modelos.cadastros.cadastro_vaga import CadastroVaga
+from pontozero_app.modelos.cadastros.cadastro_pessoa import CadastroPessoa
+from pontozero_app.modelos.cadastros.cadastro_instituicao import CadastroInstituicao
 
 from pontozero_app.modelos.controladores.controlador_empresa import ControladorEmpresa
 from pontozero_app.modelos.controladores.controlador_estudante import ControladorEstudante
