@@ -14,6 +14,11 @@ from pontozero_app.modelos.repositorios.base_repositorio import BaseRepositorio
 from pontozero_app.modelos.repositorios.repositorio_empresa import RepositorioEmpresa
 from pontozero_app.modelos.repositorios.repositorio_estudante import RepositorioEstudante
 from pontozero_app.modelos.repositorios.repositorio_vaga import RepositorioVaga
+from pontozero_app.modelos.repositorios.repositorio_escola import RepositorioEscola
+from pontozero_app.modelos.repositorios.repositorio_professor import RepositorioProfessor
+from pontozero_app.modelos.repositorios.repositorio_trabalho import RepositorioTrabalho
+from pontozero_app.modelos.repositorios.repositorio_curso import RepositorioCurso
+from pontozero_app.modelos.repositorios.repositorio_curriculo import RepositorioCurriculo
 from pontozero_app.modelos.repositorios.repositorio_abstract_factory import RepositorioFactory
 
 
