@@ -1,5 +1,6 @@
 from django.db import models
-from pontozero_app.modelos import *
+from pontozero_app.modelos.entidades.pessoa import Pessoa
+from pontozero_app.modelos.entidades.empresa import Empresa
 
 
 class Trabalho(models.Model):

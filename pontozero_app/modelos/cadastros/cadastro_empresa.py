@@ -1,4 +1,4 @@
-from pontozero_app.modelos import CadastroInstituicao
+from pontozero_app.modelos.cadastros.cadastro_instituicao import CadastroInstituicao
 
 class CadastroEmpresa(CadastroInstituicao):
 

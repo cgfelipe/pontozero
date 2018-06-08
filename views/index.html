@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title_section %}Home{% endblock %}
+
+
+{% block content %}
+
+    <div class="btn-group-lg">
+        <a class="btn btn-block btn-default" href="{% url 'cadastrar_estudante' %}">Cadastrar Estudante</a>
+        <a class="btn btn-block btn-default" href="{% url 'listar_estudantes' %}">Lista de Estudantes</a>
+<hr>
+        <a class="btn btn-block btn-default" href="{% url 'cadastrar_empresa' %}">Cadastrar Empresa</a>
+        <a class="btn btn-block btn-default" href="{% url 'listar_empresas' %}">Lista de Empresas</a>
+    </div>
+
+{% endblock %}

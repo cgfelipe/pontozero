@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title_section %}Lista de Empresas{% endblock %}
+
+{% block content %}
+    <ul class="list-group">
+    {% for empresa in empresas %}
+        <a href="{% url 'visualizar_empresa' empresa.cnpj %}"><li class="list-group-item">{{ empresa.nome }} <span class="badge">{{ empresa.cnpj }}</span></li></a>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title_section %}Empresa{% endblock %}
+
+{% block content %}
+     <form class="form-group" method="post" action="{% url 'visualizar_empresa' empresa.cnpj %}">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Informações Gerais</legend>
+            {{ form.as_p }}
+        </fieldset>
+        <fieldset>
+            <legend>Endereço</legend>
+            {{ endereco_form.as_p }}
+        </fieldset>
+        <button type="submit" class="btn btn-lg btn-block btn-primary" name="atualizar" value="atualizar">Atualizar Empresa</button>
+        <button type="submit" class="btn btn-lg btn-block btn-danger" name="deletar" value="deletar">Deletar Empresa</button>
+
+    </form>
+{% endblock %}

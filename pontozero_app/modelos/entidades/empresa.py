@@ -6,7 +6,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 class Empresa(Instituicao):
     ramo = models.CharField(max_length=200)
-    reputacao = models.FloatField(MinValueValidator(0), MaxValueValidator(5), default=5)
+    reputacao = models.FloatField(default=5, validators=[MinValueValidator(0), MaxValueValidator(5)])
 
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):

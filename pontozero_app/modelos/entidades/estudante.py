@@ -1,5 +1,6 @@
 from django.db import models
-from pontozero_app.modelos import *
+from pontozero_app.modelos.entidades.escola import Escola
+from pontozero_app.modelos.entidades.pessoa import Pessoa
 from werkzeug.security import check_password_hash, generate_password_hash
 import base64
 

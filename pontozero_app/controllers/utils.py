@@ -7,11 +7,10 @@ from pontozero_app.modelos import Empresa, Estudante
 def dumps_basic_auth(http_auth):
     auth = http_auth.split()
     if len(auth) == 2:
-        # NOTE: We are only support basic authentication for now.
+        # NOTE: We only support basic authentication for now.
         #
         if auth[0].lower() == "basic":
             ident, password = base64.b64decode(auth[1]).decode('utf8').split(':')
-            print(ident, password)
             return ident, password
     return None, None
 

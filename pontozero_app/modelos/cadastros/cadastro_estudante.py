@@ -1,5 +1,5 @@
 from pontozero_app.modelos import BaseRepositorio
-from pontozero_app.modelos import CadastroPessoa
+from pontozero_app.modelos.cadastros.cadastro_pessoa import CadastroPessoa
 
 
 class CadastroEstudante(CadastroPessoa):

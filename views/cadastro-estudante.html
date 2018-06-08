@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block title_section %}Cadastrar Estudante{% endblock %}
+
+
+{% block content %}
+    <form method="post" class="form-group" action="{% url 'cadastrar_estudante' %}">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Informações Gerais</legend>
+            {{ form.as_p }}
+        </fieldset>
+        <fieldset>
+            <legend>Endereço</legend>
+            {{ endereco_form.as_p }}
+        </fieldset>
+        <button type="submit" class="btn btn-lg btn-success btn-block">Cadastrar Estudante</button>
+    </form>
+{% endblock %}

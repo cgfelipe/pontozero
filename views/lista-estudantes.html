@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title_section %}Lista de Estudantes{% endblock %}
+
+{% block content %}
+    <ul class="list-group">
+    {% for estudante in estudantes %}
+        <a href="{% url 'visualizar_estudante' estudante.cpf %}"><li class="list-group-item">{{ estudante.nome }} <span class="badge">{{ estudante.cpf }}</span></li></a>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
